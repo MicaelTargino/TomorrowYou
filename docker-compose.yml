@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  django_backend:
+    build: ./django_backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  email_worker:
+    build: ./email-worker
+    depends_on:
+      - redis
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
