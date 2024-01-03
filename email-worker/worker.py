@@ -4,13 +4,17 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
+from supabase import create_client, Client
+
+SUPABASE_URL = os.getenv('SUPABASE_URL', '')
+SUPABASE_API_KEY = os.getenv('SUPABASE_API_KEY', '')
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_API_KEY)
  
 def send_mail(letter, receiver_email):            
         # try: 
-            sender_email = 'micaelgomestargino@gmail.com'
-            password = 'qdlf mfqw brae lupz'
-            # sender_email = os.getenv('SENDER_MAIL', '' )
-            # password = os.getenv('SENDER_PASSWORD', '')
+            sender_email = os.getenv('SENDER_MAIL', '')
+            password = os.getenv('SENDER_PASSWORD', '')
             print(sender_email)
             print(password)
                 
@@ -42,5 +46,7 @@ if __name__ == '__main__':
         print('Mandando a mensagem para: ', mensagem['recipient_email'])
         res = send_mail(mensagem['message_body'], mensagem['recipient_email'])
         if res:
+    
+            data, count = supabase.table('api_mailmessage').update({'sent': True}).eq('id',mensagem['id']).execute()
             print('Mensagem para', mensagem['recipient_email'], 'enviada')
         else: print('Mensagem falha')

@@ -15,9 +15,12 @@ def get_emails_for_the_day():
     # Setup Redis connection
     redis_conn = get_redis_connection()
 
+    redis_conn.delete('email_queue')
+
     # Push messages to the Redis list (queue)
     for email in emails:
         email_data = {
+            'id': email.id,
             'recipient_email': email.recipient_email,
             'subject': email.subject,
             'message_body': email.message_body

@@ -6,5 +6,6 @@ class MyCronConfig(AppConfig):
     name = 'cron'
 
     def ready(self):
+        print('fiquei pronto')
         from .cron import start_scheduler
         start_scheduler(sender=self)
