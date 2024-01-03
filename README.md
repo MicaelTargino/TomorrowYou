@@ -4,12 +4,12 @@ A project to write a letter for your future self.
 
 ## Stack
 
-- Frontend: ReactJs ![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
-- Backend: Django ![Django](https://img.shields.io/badge/-django-0D1117?style=for-the-badge&logo=django&logoColor=purple&labelColor=0D1117)&nbsp; 
-- Email Sender Worker: Python ![Python](https://img.shields.io/badge/-python-0D1117?style=for-the-badge&logo=python&logoColor=purple&labelColor=0D1117)&nbsp;
-- Database: PostgreSQL ![PostgreSQL](https://img.shields.io/badge/-0D1117?style=for-the-badge&logo=postgresql&labelColor=0D1117)
-- Email Queue: Redis ![Redis](https://img.shields.io/badge/-0D1117?style=for-the-badge&logo=redis&labelColor=0D1117)
-- Container Orchestration: Docker ![Docker](https://img.shields.io/badge/-0D1117?style=for-the-badge&logo=docker&labelColor=0D1117)
+- Frontend: ![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
+- Backend: ![Django](https://img.shields.io/badge/-django-0D1117?style=for-the-badge&logo=django&logoColor=green&labelColor=0D1117)&nbsp; 
+- Email Sender Worker: Python ![Python](https://img.shields.io/badge/-python-0D1117?style=for-the-badge&logo=python&logoColor=blue&labelColor=0D1117)&nbsp;
+- Database: ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&labelColor=0D1117)
+- Email Queue: ![Redis](https://img.shields.io/badge/Redis-0D1117?style=for-the-badge&logo=redis&labelColor=0D1117)
+- Container Orchestration: ![Docker](https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&labelColor=0D1117)
 
 ## Running the project
 
