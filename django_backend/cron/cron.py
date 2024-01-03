@@ -32,8 +32,7 @@ def get_emails_for_the_day():
     return JsonResponse({'status': 201, 'message': f'{emails.count()} emails queued'})
 
 def start_scheduler(sender, **kwargs):
-    scheduler.add_job(get_emails_for_the_day, 'interval', minutes=1)
+    scheduler.add_job(get_emails_for_the_day, 'cron', hour=8, minute=0)
     scheduler.start()
-    print(scheduler.get_jobs())
 
 

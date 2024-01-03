@@ -1,6 +1,4 @@
-# Project Name
-
-## Overview
+# TomorrowYou
 
 A project to write a letter for your future self.
 
