@@ -12,8 +12,8 @@ services:
   email_worker:
     build: ./email-worker
     environment:
-      - SENDER_MAIL=micaelgomestargino@gmail.com
-      - SENDER_PASSWORD=qdlf mfqw brae lupz
+      - SENDER_MAIL=your_email
+      - SENDER_PASSWORD=your_app_password
       - REDIS_HOST=redis
       - SUPABASE_URL=https://dndnbfmacguvntfxqvop.supabase.co
       - SUPABASE_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRuZG5iZm1hY2d1dm50Znhxdm9wIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNDA2MDIzNCwiZXhwIjoyMDE5NjM2MjM0fQ.XSzmPuc1c0SA56gdqVsNHv8Gvv83xf7weKVYW9RHJqM
